@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <h3>Hola que hace</h3>
-
-    <div>
-      <label for=""></label>
+  <div id="app">
+    
+    <div id="input">
+      <span>Tarea</span>
       <input 
       type="text"
-      placeholder="Agregar"
+      placeholder="Ingresa nueva tarea"
       v-model="nuevaActividad">
       <button @click="nuevaActividad">Agregar</button>
     </div>
     <h1>Lista</h1>
-    <Actividades></Actividades>>
+    <Actividades></Actividades>
 
     <ul>
       <li>actividad: {{actividad}}</li>
@@ -33,6 +32,9 @@ export default {
   }),
   components: {
     Actividades,
+  },
+  method: {
+
   }
 };
 </script>
@@ -42,8 +44,17 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
+  
+  margin: 60px;
+}
+
+#input {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  font-weight: bold;
+  
 }
 </style>
