@@ -10,11 +10,7 @@
     v-model="nuevaActividad">
     <button class="btn btn-primary" @click="agregarNuevaActividad">Agregar</button>
   </div>
-        <ul>
-          <label>{{nuevaActividad}}</label>
-          <button class="btn btn-success">Eliminar</button>
-            
-        </ul>
+  
 
     </div>
 </template>
@@ -25,11 +21,12 @@ export default {
     name: "Actividades",
     data: () => ({
         nuevaActividad: "",
-        actividades: ["Pagar Internet", "Pagar Netflix"]
+        
     }),
     methods: {
         agregarNuevaActividad() {
-            this.actividades.push(this.nuevaActividad)
+//            this.actividades.push(this.nuevaActividad)
+            this.$emit("nueva-actividad", this.nuevaActividad)
             this.nuevaActividad = "";
         },
         destruirActividad() {
